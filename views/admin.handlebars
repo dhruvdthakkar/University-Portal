@@ -1,0 +1,35 @@
+{{#if isAdmin}}
+<div>
+    <h3>Faculty</h3>
+    {{#each faculty}}
+    <div class="card material-faculty" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">{{email}}</p>
+        </div>
+    </div>
+    {{/each}}
+    <h3>Student</h3>
+    {{#each student}}
+    <div class="card material-faculty" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">{{email}}</p>
+            <p class="card-text">{{enrollment}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<div class="card card-body" style="width: 50%; margin-bottom: 200px;margin-top: 50px">
+    <form method="post" action="/admin">
+        <div class="form-group">
+            <label for="password">Password<span style="color: red">*</span></label>
+            <input type="password" name="password" class="form-control" placeholder="Admin Password" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{{/if}}

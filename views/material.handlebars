@@ -1,0 +1,61 @@
+<div class="container">
+    {{#if user}}
+    <div class="row">
+        <div class="col-sm-6">
+            <form method='post' action='/upload' enctype="multipart/form-data">
+                <div class="card material-upload">
+                    <h4>Add Materials</h4>
+                    <div class="form-group">
+                        <label for="exampleInputTitle">Title</label>
+                        <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp"
+                            placeholder="Enter Title" name="title" required>
+                    </div>
+
+                    <input style="padding: 10px" type='file' name='fileUploaded'>
+                    <input style="background-color: #007BFF; border: 0; color: white; border-radius: 5px; padding: 6px"
+                        type='submit'>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <div class="card material-upload-faculty">
+                <h5 class="card-header">Faculty's Material</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Material Uploaded by Faculty</h5>
+                    <a href="/materialFaculty" class="btn btn-primary">Material</a>
+                </div>
+            </div>
+            <div class="card material-upload-student">
+                <h5 class="card-header">Student's Material</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Material Uploaded by Student</h5>
+                    <a href="/materialStudent" class="btn btn-primary">Material</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="row" style="width: 50%">
+        <div class="col-sm-12">
+            <div class="card material-upload-faculty">
+                <h5 class="card-header">Faculty's Material</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Material Uploaded by Faculty</h5>
+                    <a href="/materialFaculty" class="btn btn-primary">Material</a>
+                </div>
+            </div>
+            <div class="card material-upload-student">
+                <h5 class="card-header">Student's Material</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Material Uploaded by Student</h5>
+                    <a href="/materialStudent" class="btn btn-primary">Material</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>
+<br>
+<br>
+<br>
+<br><br>

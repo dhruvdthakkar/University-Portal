@@ -1,0 +1,12 @@
+<h3>Faculty Uploaded Material</h3>
+
+{{#each x}}
+<div class="card material-faculty" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">Physics Assignment</p>
+        <a href="assets/{{path}}" target="_blank" class="card-link">View</a>
+        <a href="assets/{{path}}" target="_blank" class="card-link" download>Download</a>
+    </div>
+</div>
+{{/each}}
